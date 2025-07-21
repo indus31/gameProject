@@ -8,6 +8,7 @@ import { AnimIntroPageRoutingModule } from './anim-intro-routing.module';
 
 import { AnimIntroPage } from './anim-intro.page';
 import { TitleIntroComponent } from './title-intro/title-intro.component';
+import { AnimationVilleIntroComponent } from './animation-ville-intro/animation-ville-intro.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { TitleIntroComponent } from './title-intro/title-intro.component';
     IonicModule,
     AnimIntroPageRoutingModule
   ],
-  declarations: [AnimIntroPage,TitleIntroComponent]
+  declarations: [AnimIntroPage,TitleIntroComponent,AnimationVilleIntroComponent]
 })
 export class AnimIntroPageModule {}
