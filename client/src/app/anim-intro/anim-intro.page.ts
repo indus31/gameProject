@@ -9,17 +9,17 @@ import { NavController } from '@ionic/angular';
 })
 export class AnimIntroPage implements OnInit {
   showElements: boolean = true;
-  timer: number = 10;
+  timer: number = 20;
   private timerInterval: any;
   private isTimerRunning: boolean = false;
 
-  constructor(private navCtrl: NavController,private renderer: Renderer2) { }
-  
+  constructor(private navCtrl: NavController, private renderer: Renderer2) { }
+
   ngOnInit() {
     this.startTimer();
   }
 
-    @HostListener('document:keypress', ['$event'])
+  @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     if (event.key === 'Enter') {
       this.navCtrl.navigateRoot('/home');
@@ -35,7 +35,7 @@ export class AnimIntroPage implements OnInit {
   }
 
   startTimer() {
-   const screenIntro = document.getElementById('screenIntro');
+    const screenIntro = document.getElementById('screenIntro');
     if (!this.isTimerRunning) {
       this.isTimerRunning = true;
       this.timerInterval = setInterval(() => {
@@ -43,8 +43,8 @@ export class AnimIntroPage implements OnInit {
         if (this.timer <= 0) {
           this.stopTimer();
           this.navCtrl.navigateRoot('/home');
-        }else if(this.timer<= 7 ){
-         this.renderer.setStyle(screenIntro, 'backgroundColor', `#FFEFFF`);
+        } else if (this.timer <= 17) {
+          this.renderer.setStyle(screenIntro, 'backgroundColor', `#FFEFFF`);
         }
       }, 1000);
     }
@@ -57,5 +57,6 @@ export class AnimIntroPage implements OnInit {
       this.isTimerRunning = false;
     }
   }
+  
   
 }
