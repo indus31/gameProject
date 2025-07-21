@@ -41,5 +41,40 @@
 #imageTitle2{
     position:absolute;
     right:30%;
-    top:42%;
+    top:41%;
+    display:none;
+}
+#grandeEtoile{
+    position: absolute;
+    //top:10%;
+    //right:0%;
+    width:10%;
+    display:none;
+
+}
+#imageRemi{
+    display:none;
+    position:absolute;
+    width:15%;
+    height:20%;
+    top:50%;
+    left:10%;
+    border-radius: 100%;
+}
+#imageKevin{
+    display:none;
+    position:absolute;
+    width:15%;
+    height:20%;
+    top:50%;
+    right:10%;
+    border-radius: 100%;
+
+}
+#paysage{
+    position: absolute;
+    width: 94.5%;
+    height:80%;
+    display:none;
+
 }
